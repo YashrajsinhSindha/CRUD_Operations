@@ -1,0 +1,31 @@
+<body>
+    <table border='1'>
+        <thread>
+        <tr>
+            <td>Student</td>
+            <td>Student name</td>
+            <td>Age</td>
+            <td>Email:</td>
+            <td>Department</td>
+            <td>Actions</td>
+        </tr>
+        </thread>
+        
+        <tbody> <!--django template language-->
+        {% for s in stu_list %}
+        <tr><td>{{s.id}}</td>
+        <td>{{s.name}}</td>
+        <td>{{s.age}}</td>
+        <td>{{s.email}}</td>
+        <td>{{s.department}}</td>
+        <td>
+            <a href="/edit/{{s.id}}"><span class="glyphicon glyphicon-pencil">Edit</span></a>
+            <a href="/delete/{{s.id}}">Delete</a>
+    
+        </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <BR></BR></BR></HR>
+</body>

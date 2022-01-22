@@ -1,0 +1,19 @@
+<html>
+    <head><title>Student - Edit</title></head>
+    <body>
+      <form method="POST" action='/update/{{stu.id}}'>
+          {% csrf_token %}
+          <h2>update details</h2>
+          Name:<input type="text" name="name" value="{{stu.name}}"/></br></br>
+          Age:<input type="text" name="age" value="{{stu.age}}"/></br></br>
+          Email:<input type="text" name="email" value="{{stu.email}}"/></br></br>
+          Department:<input type="text" name="department" value="{{stu.department}}"/></br></br>
+
+          <input type="submit" value="Update">
+      </form>  
+
+
+
+
+    </body>    
+</html>
